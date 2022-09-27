@@ -1,44 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20220927 20:19:24.556" rpa="false" schemaversion="3">
-<suite id="s1" name="Slogan" source="C:\qaAcademy\vdt-season2\trade-sticker\tests\slogan.robot">
-<test id="s1-t1" name="Deve validar o slogan da home page" line="8">
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20220927 20:48:05.175" rpa="false" schemaversion="3">
+<suite id="s1" name="Login" source="C:\qaAcademy\vdt-season2\trade-sticker\tests\login.robot">
+<test id="s1-t1" name="Deve logar com sucesso" line="9">
 <kw name="New Browser" library="Browser">
 <arg>headless=False</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<msg timestamp="20220927 20:19:26.926" level="INFO">{"browser": "chromium", "headless": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "deprecated_pos_args": [], "tracesDir": "C:\\qaAcademy\\vdt-season2\\trade-sticker\\logs\\browser\\traces\\17fa00d9-bd2a-465c-bbc8-f27047979401"}</msg>
-<msg timestamp="20220927 20:19:28.311" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"deprecated_pos_args":[],"tracesDir":"C:\\qaAcademy\\vdt-season2\\trade-sticker\\logs\\browser\\traces\\17fa00d9-bd2a-465c-bbc8-f27047979401"}</msg>
-<status status="PASS" starttime="20220927 20:19:26.924" endtime="20220927 20:19:28.312"/>
+<msg timestamp="20220927 20:48:06.528" level="INFO">{"browser": "chromium", "headless": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "deprecated_pos_args": [], "tracesDir": "C:\\qaAcademy\\vdt-season2\\trade-sticker\\logs\\browser\\traces\\763d24b4-3ed2-426e-9138-87842924b583"}</msg>
+<msg timestamp="20220927 20:48:07.224" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"deprecated_pos_args":[],"tracesDir":"C:\\qaAcademy\\vdt-season2\\trade-sticker\\logs\\browser\\traces\\763d24b4-3ed2-426e-9138-87842924b583"}</msg>
+<status status="PASS" starttime="20220927 20:48:06.528" endtime="20220927 20:48:07.224"/>
 </kw>
 <kw name="New Page" library="Browser">
 <arg>https://trade-sticker-dev.vercel.app</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<msg timestamp="20220927 20:19:30.243" level="INFO">Successfully initialized new page object and opened url: https://trade-sticker-dev.vercel.app</msg>
-<msg timestamp="20220927 20:19:30.244" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
-<status status="PASS" starttime="20220927 20:19:28.329" endtime="20220927 20:19:30.245"/>
+<msg timestamp="20220927 20:48:08.543" level="INFO">Successfully initialized new page object and opened url: https://trade-sticker-dev.vercel.app</msg>
+<msg timestamp="20220927 20:48:08.543" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<status status="PASS" starttime="20220927 20:48:07.227" endtime="20220927 20:48:08.544"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=email]</arg>
+<arg>papito@gmail.com</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20220927 20:48:08.547" level="INFO">Fills the text 'papito@gmail.com' in the given field.</msg>
+<status status="PASS" starttime="20220927 20:48:08.546" endtime="20220927 20:48:08.631"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=password]</arg>
+<arg>vaibrasil</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20220927 20:48:08.633" level="INFO">Fills the text 'vaibrasil' in the given field.</msg>
+<status status="PASS" starttime="20220927 20:48:08.633" endtime="20220927 20:48:08.666"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>css=button &gt;&gt; text=Entrar</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20220927 20:48:08.668" endtime="20220927 20:48:08.759"/>
 </kw>
 <kw name="Get Text" library="Browser">
-<arg>.logo-container h2</arg>
-<arg>contains</arg>
-<arg>${slogan}</arg>
+<arg>css=.header-content strong</arg>
+<arg>equal</arg>
+<arg>${header_title}</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="PASS" starttime="20220927 20:19:30.247" endtime="20220927 20:19:30.399"/>
+<status status="PASS" starttime="20220927 20:48:08.761" endtime="20220927 20:48:08.816"/>
 </kw>
 <kw name="Take Screenshot" library="Browser">
 <tag>PageContent</tag>
 <doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
-<msg timestamp="20220927 20:19:31.814" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-1.png"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20220927 20:19:30.400" endtime="20220927 20:19:31.814"/>
+<msg timestamp="20220927 20:48:09.185" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-1.png"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220927 20:48:08.817" endtime="20220927 20:48:09.185"/>
 </kw>
-<status status="PASS" starttime="20220927 20:19:26.913" endtime="20220927 20:19:31.817"/>
+<status status="PASS" starttime="20220927 20:48:06.528" endtime="20220927 20:48:09.186"/>
 </test>
-<status status="PASS" starttime="20220927 20:19:24.561" endtime="20220927 20:19:32.032"/>
+<doc>Login tests</doc>
+<status status="PASS" starttime="20220927 20:48:05.176" endtime="20220927 20:48:09.288"/>
 </suite>
 <statistics>
 <total>
@@ -47,7 +73,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Slogan">Slogan</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Login">Login</stat>
 </suite>
 </statistics>
 <errors>
