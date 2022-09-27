@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20220927 20:17:16.939" rpa="false" schemaversion="3">
-<suite id="s1" name="Hello" source="C:\qaAcademy\vdt-season2\trade-sticker\hello.robot">
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20220927 20:19:24.556" rpa="false" schemaversion="3">
+<suite id="s1" name="Slogan" source="C:\qaAcademy\vdt-season2\trade-sticker\tests\slogan.robot">
 <test id="s1-t1" name="Deve validar o slogan da home page" line="8">
 <kw name="New Browser" library="Browser">
 <arg>headless=False</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<msg timestamp="20220927 20:17:20.617" level="INFO">{"browser": "chromium", "headless": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "deprecated_pos_args": [], "tracesDir": "C:\\qaAcademy\\vdt-season2\\trade-sticker\\logs\\browser\\traces\\b83860b7-2fb2-4311-8993-dc3ed1d49230"}</msg>
-<msg timestamp="20220927 20:17:23.823" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"deprecated_pos_args":[],"tracesDir":"C:\\qaAcademy\\vdt-season2\\trade-sticker\\logs\\browser\\traces\\b83860b7-2fb2-4311-8993-dc3ed1d49230"}</msg>
-<status status="PASS" starttime="20220927 20:17:20.616" endtime="20220927 20:17:23.823"/>
+<msg timestamp="20220927 20:19:26.926" level="INFO">{"browser": "chromium", "headless": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "deprecated_pos_args": [], "tracesDir": "C:\\qaAcademy\\vdt-season2\\trade-sticker\\logs\\browser\\traces\\17fa00d9-bd2a-465c-bbc8-f27047979401"}</msg>
+<msg timestamp="20220927 20:19:28.311" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"deprecated_pos_args":[],"tracesDir":"C:\\qaAcademy\\vdt-season2\\trade-sticker\\logs\\browser\\traces\\17fa00d9-bd2a-465c-bbc8-f27047979401"}</msg>
+<status status="PASS" starttime="20220927 20:19:26.924" endtime="20220927 20:19:28.312"/>
 </kw>
 <kw name="New Page" library="Browser">
 <arg>https://trade-sticker-dev.vercel.app</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<msg timestamp="20220927 20:17:26.843" level="INFO">Successfully initialized new page object and opened url: https://trade-sticker-dev.vercel.app</msg>
-<msg timestamp="20220927 20:17:26.843" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
-<status status="PASS" starttime="20220927 20:17:23.834" endtime="20220927 20:17:26.843"/>
+<msg timestamp="20220927 20:19:30.243" level="INFO">Successfully initialized new page object and opened url: https://trade-sticker-dev.vercel.app</msg>
+<msg timestamp="20220927 20:19:30.244" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<status status="PASS" starttime="20220927 20:19:28.329" endtime="20220927 20:19:30.245"/>
 </kw>
 <kw name="Get Text" library="Browser">
 <arg>.logo-container h2</arg>
@@ -28,17 +28,17 @@
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="PASS" starttime="20220927 20:17:26.846" endtime="20220927 20:17:27.040"/>
+<status status="PASS" starttime="20220927 20:19:30.247" endtime="20220927 20:19:30.399"/>
 </kw>
 <kw name="Take Screenshot" library="Browser">
 <tag>PageContent</tag>
 <doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
-<msg timestamp="20220927 20:17:28.565" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-1.png"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20220927 20:17:27.042" endtime="20220927 20:17:28.566"/>
+<msg timestamp="20220927 20:19:31.814" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-1.png"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220927 20:19:30.400" endtime="20220927 20:19:31.814"/>
 </kw>
-<status status="PASS" starttime="20220927 20:17:20.605" endtime="20220927 20:17:28.568"/>
+<status status="PASS" starttime="20220927 20:19:26.913" endtime="20220927 20:19:31.817"/>
 </test>
-<status status="PASS" starttime="20220927 20:17:16.944" endtime="20220927 20:17:28.839"/>
+<status status="PASS" starttime="20220927 20:19:24.561" endtime="20220927 20:19:32.032"/>
 </suite>
 <statistics>
 <total>
@@ -47,7 +47,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Hello">Hello</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Slogan">Slogan</stat>
 </suite>
 </statistics>
 <errors>
