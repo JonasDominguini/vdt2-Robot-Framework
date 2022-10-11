@@ -14,7 +14,7 @@ Do Login
     
 
 Start Test
-    New Browser         headless=False
+    New Browser         headless=False      browser=firefox
 
 
 Finish Test
