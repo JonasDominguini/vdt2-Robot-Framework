@@ -28,7 +28,7 @@ Deve exibir notificação toaster se a senha não for preenchida
 
 Deve exibir notificação toaster se a email não for preenchido
     Go To Login Page
-   Submmit Credencials Password  vaiBrasil     
+    Submmit Credencials Password  vaiBrasil     
     Toast Message Should Be      Por favor, informe o seu email! 
 
 Deve exibir notificação toaster se a email e senha não for preenchido   
