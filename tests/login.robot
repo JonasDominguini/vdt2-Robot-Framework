@@ -19,5 +19,20 @@ Não deve logar com a senha incorreta
     Toast Message Should Be     Credenciais inválidas, tente novamente! 
     
 
+Deve exibir notificação toaster se a senha não for preenchida
 
+    Go To Login Page
+    Submmit Credencials Email         papito@gmail.com       
+    Toast Message Should Be     Por favor, informe a sua senha secreta! 
+    
+
+Deve exibir notificação toaster se a email não for preenchido
+    Go To Login Page
+   Submmit Credencials Password  vaiBrasil     
+    Toast Message Should Be      Por favor, informe o seu email! 
+
+Deve exibir notificação toaster se a email e senha não for preenchido   
+    Go To Login Page
+    Submmit Credencials None              
+    Toast Message Should Be     Por favor, informe suas credenciais! 
 

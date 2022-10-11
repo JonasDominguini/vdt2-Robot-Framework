@@ -17,6 +17,20 @@ Submmit Credencials
     FIll Text               css=input[name=email]           ${email}
     FIll Text               css=input[name=password]        ${password}
     Click                   css=button >> text=Entrar
+Submmit Credencials Email
+
+    [Arguments]             ${email}         
+
+    FIll Text               css=input[name=email]           ${email}    
+    Click                   css=button >> text=Entrar
+
+Submmit Credencials Password
+    [Arguments]             ${password}    
+    FIll Text               css=input[name=password]        ${password}
+    Click                   css=button >> text=Entrar
+    
+Submmit Credencials None    
+    Click                   css=button >> text=Entrar 
 
 Toast Message Should Be
     [Arguments]     ${expected_message}
